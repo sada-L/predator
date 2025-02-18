@@ -1,0 +1,48 @@
+info:
+  contact: {}
+  title: Хищник-Жертва
+paths:
+  /api/chart:
+    get:
+      consumes:
+      - application/json
+      parameters:
+      - description: X0
+        in: query
+        name: X0
+        required: true
+        type: number
+      - description: Y0
+        in: query
+        name: Y0
+        required: true
+        type: number
+      - description: A
+        in: query
+        name: A
+        required: true
+        type: number
+      - description: B
+        in: query
+        name: B
+        required: true
+        type: number
+      - description: E
+        in: query
+        name: E
+        required: true
+        type: number
+      - description: D
+        in: query
+        name: D
+        required: true
+        type: number
+      produces:
+      - image/png
+      responses:
+        "200":
+          description: Генерируемый график
+          schema:
+            type: file
+      summary: Генерация графика
+swagger: "2.0"
